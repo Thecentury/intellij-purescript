@@ -28,12 +28,16 @@ class Purs(val project: Project) {
 
         // without a project dir we don't know where to start the server
         val projectDir = project.guessProjectDir() ?: return
-        val rootDir = projectDir.toNioPath()
 
         // without a purs bin path we can't annotate with it
         runBackgroundableTask("purs ide server ($path)", project, true) {
-            val output = CapturingProcessHandler(commandLine.withParameters("ide", "server", "-p", port.toString()))
-                    .runProcessWithProgressIndicator(it)
+            it.isIndeterminate = false
+            it.fraction = -1.0
+            val output = CapturingProcessHandler(
+                    commandLine
+                        .withParameters("ide", "server", "-p", port.toString())
+                        .withWorkDirectory(projectDir.path))
+                        .runProcess()
             port = null
             if (output.exitCode != 0) {
                 error("purs ide server died with exit code ${output.exitCode}, and stderr:\n${output.stderr}")
