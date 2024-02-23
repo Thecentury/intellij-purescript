@@ -1,8 +1,8 @@
 <idea-plugin require-restart="false">
-    <id>net.kenro.ji.jin.intellij.purescript</id>
-    <name>Purescript</name>
+    <id>net.kenro.ji.jin.intellij.purescript.thecentury</id>
+    <name>Purescript-thecentury</name>
     <version>1.0</version>
-    <vendor>intellij-purescript</vendor>
+    <vendor>intellij-purescript-thecentury</vendor>
 
     <description><![CDATA[
   This plugin provides language support
