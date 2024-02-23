@@ -17,4 +17,4 @@ help or to pair on issues and improve the plugin together,
 
 1. clone the repo
 2. `./gradlew :runIde`
-    > starts a Intellij instance with the plugin installed-
+    > starts an Intellij instance with the plugin installed-
