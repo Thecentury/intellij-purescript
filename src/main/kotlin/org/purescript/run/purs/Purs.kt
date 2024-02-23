@@ -14,12 +14,11 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.util.SystemInfo
 import org.purescript.run.Npm
-import java.io.File
 import kotlin.random.Random
 
 @Service(Service.Level.PROJECT)
 class Purs(val project: Project) {
-    private var port:Int? = null;
+    private var port:Int? = null
     private fun startServer() {
         // don't start the activity under test, it will hang if it does
         if (PluginManagerCore.isUnitTestMode) return
