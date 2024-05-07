@@ -35,7 +35,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="202.6397"/>
+    <idea-version since-build="241.*"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -235,10 +235,6 @@
         <!-- Indexes -->
         <fileBasedIndex
                 implementation="org.purescript.file.ExportedConstructorsIndex"/>
-        <fileBasedIndex
-                implementation="org.purescript.file.ExportedTypesIndex"/>
-        <fileBasedIndex
-                implementation="org.purescript.file.ImportedModuleIndex"/>
         <stubIndex implementation="org.purescript.module.ModuleNameIndex"/>
         <stubIndex
                 implementation="org.purescript.module.declaration.value.ExportedValueDecl"/>
